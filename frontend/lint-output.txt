@@ -1,0 +1,80 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+/Users/macbook/nan/frontend/src/context/AuthContext.tsx
+  14:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/macbook/nan/frontend/src/context/AuthContext.tsx:14:7
+  12 |     const storedUser = localStorage.getItem('user');
+  13 |     if (storedToken && storedUser) {
+> 14 |       setToken(storedToken);
+     |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |       setUser(JSON.parse(storedUser));
+  16 |     }
+  17 |   }, []);  react-hooks/set-state-in-effect
+  41:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-refresh/only-export-components
+
+/Users/macbook/nan/frontend/src/pages/CaseDetail.tsx
+  95:18  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/Dashboard.tsx
+  51:2  error  Parsing error: Module declaration names may only use ' or " quoted strings
+
+/Users/macbook/nan/frontend/src/pages/Documents.tsx
+  97:18  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/FIRDetail.tsx
+  69:8  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+
+/Users/macbook/nan/frontend/src/pages/FIRForm.tsx
+  45:13  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/LegalDetail.tsx
+  77:8  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+
+/Users/macbook/nan/frontend/src/pages/LegalSearch.tsx
+  73:16  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+
+/Users/macbook/nan/frontend/src/pages/Login.tsx
+  23:2  error  Parsing error: Expression expected
+
+/Users/macbook/nan/frontend/src/pages/MyCases.tsx
+  58:14  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/MyFIRs.tsx
+  72:14  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/Register.tsx
+  19:2  error  Parsing error: Expression expected
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminCases.tsx
+  98:14  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminFIRs.tsx
+  42:11  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminLegal.tsx
+  76:21  error  Parsing error: JSX element 'div' has no corresponding closing tag
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminNotifications.tsx
+  41:13  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminPanel.tsx
+  17:0  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminReports.tsx
+  51:14  error  Parsing error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+/Users/macbook/nan/frontend/src/pages/admin/AdminUsers.tsx
+  43:22  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+
+✖ 20 problems (20 errors, 0 warnings)
+

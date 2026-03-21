@@ -28,7 +28,6 @@ com/legalfir/config/JwtUtil.class
 com/legalfir/repository/DocumentRepository.class
 com/legalfir/repository/CaseRepository.class
 com/legalfir/service/FIRService.class
-com/legalfir/config/CorsConfig.class
 com/legalfir/controller/ReportController.class
 com/legalfir/entity/Case$CaseBuilder.class
 com/legalfir/entity/FIR$FIRBuilder.class

@@ -47,7 +47,6 @@
 /Users/macbook/nan/backend/src/main/java/com/legalfir/entity/User.java
 /Users/macbook/nan/backend/src/main/java/com/legalfir/service/impl/DocumentServiceImpl.java
 /Users/macbook/nan/backend/src/main/java/com/legalfir/exception/GlobalExceptionHandler.java
-/Users/macbook/nan/backend/src/main/java/com/legalfir/config/CorsConfig.java
 /Users/macbook/nan/backend/src/main/java/com/legalfir/dto/LoginResponse.java
 /Users/macbook/nan/backend/src/main/java/com/legalfir/repository/CaseLogRepository.java
 /Users/macbook/nan/backend/src/main/java/com/legalfir/service/NotificationService.java
